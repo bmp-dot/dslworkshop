@@ -156,7 +156,7 @@ class HelloVmResources(AhvVmResources):
     disks = [
         AhvVmDisk.Disk.Scsi.cloneFromVMDiskPackage(CentosPackage, bootable=True),
     ]
-    nics = [AhvVmNic.DirectNic.ingress("vlan.1000-fake")]
+    nics = [AhvVmNic.DirectNic.ingress("Primary")]
 
     guest_customization = AhvVmGC.CloudInit(
         config={
